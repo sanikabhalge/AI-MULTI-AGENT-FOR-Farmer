@@ -2,11 +2,11 @@ import sqlite3
 import pandas as pd
 
 # Load the dataset
-csv_file = "/home/sanika/multiagent/gfg/dataset_for_framer/farmer_advisor_dataset.csv"
+csv_file = "/home/sanika/multiagent/AI-MULTI-AGENT-FOR-Farmer/data/farmer_advisor_dataset.csv"
 df = pd.read_csv(csv_file)
 
 # Connect to SQLite (creates a database file if not exists)
-conn = sqlite3.connect("farmer_advisor.db")
+conn = sqlite3.connect("/home/sanika/multiagent/AI-MULTI-AGENT-FOR-Farmer/data/farmer_advisor.db")
 cursor = conn.cursor()
 
 # Create a table for crops

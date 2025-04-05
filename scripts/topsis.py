@@ -27,12 +27,12 @@ def topsis_ranking(df):
 
     # Rank crops
     df = df.sort_values(by='TOPSIS_Score', ascending=False)
-    df.to_csv("ranked_crops_by_topsis.csv", index=False)
+    df.to_csv("/home/sanika/multiagent/AI-MULTI-AGENT-FOR-Farmer/data/ranked_crops_by_topsis.csv", index=False)
 
     #return df.iloc[0]  # Return best crop
 
 if __name__ == "__main__":
-    filtered_crops = pd.read_csv("filtered_crops.csv")
+    filtered_crops = pd.read_csv("/home/sanika/multiagent/AI-MULTI-AGENT-FOR-Farmer/data/filtered_crops.csv")
     best_crop = topsis_ranking(filtered_crops)
     
     #print(f"Recommended Crop: {best_crop['Crop_Type']}")

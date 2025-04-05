@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 
 def filter_crops(soil_pH, soil_moisture, temperature, rainfall):
-    conn = sqlite3.connect("/home/sanika/multiagent/gfg/farmer_advisor.db")  # Connect to SQLite DB
+    conn = sqlite3.connect("//home/sanika/multiagent/AI-MULTI-AGENT-FOR-Farmer/data/farmer_advisor.db")  # Connect to SQLite DB
     query = f"""
     SELECT * FROM crops
     WHERE Soil_pH BETWEEN {soil_pH - 0.5} AND {soil_pH + 0.5}
@@ -20,4 +20,4 @@ if __name__ == "__main__":
     soil_pH, soil_moisture, temperature, rainfall = map(float, sys.argv[1:])
     
     filtered_crops = filter_crops(soil_pH, soil_moisture, temperature, rainfall)
-    filtered_crops.to_csv("filtered_crops.csv", index=False)  # Save for TOPSIS
+    filtered_crops.to_csv("/home/sanika/multiagent/AI-MULTI-AGENT-FOR-Farmer/data/filtered_crops.csv", index=False)  # Save for TOPSIS
