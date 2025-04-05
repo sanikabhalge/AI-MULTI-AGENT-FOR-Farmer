@@ -1,0 +1,2 @@
+pade @ git+https://github.com/jrparente/PADE.git
+pandas
