@@ -17,6 +17,7 @@ def run_agent():
     moisture = request.form['moisture']
     temp = request.form['temperature']
     rain = request.form['rainfall']
+    
 
     # Trigger the agent using subprocess
     subprocess.Popen(['python3', 'main.py', ph, moisture, temp, rain])
